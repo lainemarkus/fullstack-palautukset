@@ -24,7 +24,7 @@ const App = () => {
 
   const randomNumber = () => {
 
-    var rand = Math.round(Math.random() * (anecdotes.length))    
+    var rand = Math.round(Math.random() * (anecdotes.length-1))    
     console.log(rand)    
 
     return rand   
