@@ -41,7 +41,7 @@ const App = () => {
 
   return (
     <div>
-
+      <h1>Anecdotes</h1>
       <p>{anecdotes[selected]} </p>
       <p>has {votes[selected]} votes</p>
       <Button handleClick={() => handleVotes()} text="vote"/>
