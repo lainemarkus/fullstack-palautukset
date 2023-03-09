@@ -159,10 +159,7 @@ const App = () => {
     setNewNumber(event.target.value)
   }
 
-  const handleFilterChange = (event) => {
-    setFilterText(event.target.value)
-    console.log(event.target.value)
-  }
+
 
   const handleNotificationChange = (event) => {
     setNotificationMessage(event.target.value)
