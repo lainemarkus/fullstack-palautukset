@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from 'react'
 import axios from 'axios'
 
+document.cookie = 'my_cookie=cookie_value; SameSite=None; Secure';
 
 const Filter = ({ filterText, handleSelectedCountryChange, handleFilterChange }) => {
   return (
@@ -43,6 +44,7 @@ const CountryDetails = ({ country }) => {
     return () => clearTimeout(timeout)
   }, [country.capital])
 
+  
 
   return (
     <>

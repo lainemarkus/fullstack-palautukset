@@ -159,6 +159,10 @@ const App = () => {
     setNewNumber(event.target.value)
   }
 
+  const handleFilterChange = (event) => {
+    setFilterText(event.target.value)
+   
+  }
 
 
   const handleNotificationChange = (event) => {
