@@ -114,7 +114,6 @@ const App = () => {
 
 
 
-
   const addPerson = (event) => {
 
     event.preventDefault()
@@ -131,18 +130,23 @@ const App = () => {
     else {
       personService
         .create(personObject)
-          .then(returnedPerson => {
-            setPersons(persons.concat(returnedPerson))
+          .then(createdPerson => {
+            setPersons(persons.concat(createdPerson))
             setNewName('')
             setNewNumber('')
             setNotificationType('success')
-            setNotificationMessage(`Added ${returnedPerson.name}`)
+            setNotificationMessage(`Added ${createdPerson.name}`)
             
             setTimeout(() => {
               setNotificationMessage(null)
             }, 3000)
             console.log(notificationMessage)
-          })    
+          })   
+          .catch(error => {
+            setNotificationType('error')
+            setNotificationMessage(`Person validation failed: name: Path 'name' ('${returnedPerson.name}) is shorter than the miminum allowed length (3).`)
+            console.log(response.data)
+          }) 
     }
 
 
