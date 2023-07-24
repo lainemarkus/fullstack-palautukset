@@ -144,8 +144,8 @@ const App = () => {
           })   
           .catch(error => {
             setNotificationType('error')
-            setNotificationMessage(`Person validation failed: name: Path 'name' ('${returnedPerson.name}) is shorter than the miminum allowed length (3).`)
-            console.log(response.data)
+            setNotificationMessage(error.response.data.error)
+            console.log(error.response.data)
           }) 
     }
 
