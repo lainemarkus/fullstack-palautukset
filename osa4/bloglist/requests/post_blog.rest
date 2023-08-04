@@ -1,5 +1,6 @@
 POST http://localhost:3003/api/blogs
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1ha2V3YXZlczMiLCJpZCI6IjY0Y2M5M2Y5NDU1M2I0N2ZkODc5M2QyYiIsImlhdCI6MTY5MTEzNTk3MywiZXhwIjoxNjkxMTM5NTczfQ.hPXZPSVOwvM7galyh7QnOYmiLvZCX0ZwlvPNplqqifU
 
 {
   "title": "Kivat kissat",
